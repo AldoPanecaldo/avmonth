@@ -99,7 +99,7 @@ html {
     height: 100%;
 }
 .rotate {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
     transition: transform 0.5s;
 }
 #imagesContainer img {
