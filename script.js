@@ -354,14 +354,16 @@ function setImage(step, hideImage, rotate) {
             elem.classList.remove("showImg");
             elem.classList.add("hideImg");
         }
-        let childImages = elem.querySelectorAll("img");
-        if (rotate) {
-            for (let j = 0; j < childImages.length; j++) {
-                childImages[j].classList.add("rotate");
-            }
-        } else {
-            for (let j = 0; j < childImages.length; j++) {
-                childImages[j].classList.remove("rotate");
+        if (i == step - 1) {
+            let childImages = elem.querySelectorAll("img");
+            if (rotate) {
+                for (let j = 0; j < childImages.length; j++) {
+                    childImages[j].classList.add("rotate");
+                }
+            } else {
+                for (let j = 0; j < childImages.length; j++) {
+                    childImages[j].classList.remove("rotate");
+                }
             }
         }
     }
