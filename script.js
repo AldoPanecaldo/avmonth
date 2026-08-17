@@ -195,7 +195,7 @@ function mainFunction() {
             } else if (i == 23 || i == 24 || i == 25) {
                 extension = ".png";
             }
-            imageElem.src = "/images/" + i + extension;
+            imageElem.src = "./images/" + i + extension;
             imageElem.classList.add(styleClass);
             let imageSubElement = document.createElement("img");
             imageSubElement.src = imageElem.src;
