@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    /* font-size: 16px; */
+    font-size: calc(min(4.5vw, 4.5vh));
+}
+html {
+    background: linear-gradient(to bottom, hsl(160, 0%, 10%), hsl(180, 0%, 5%));
+}
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
+#main {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+#main * {
+    pointer-events: none;
+}
+#main > .container {
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+    pointer-events: none;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.2em;
+}
+/* Forward & Back button */
+#forward {
+    opacity: 0;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    z-index: 20;
+    pointer-events: all;
+}
+#back {
+    font-size: 0.8em;
+    position: absolute;
+    width: 100%;
+    bottom: 2.5em;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #ffffff30;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    pointer-events: all;
+}
+#step {
+    font-size: 0.75em;
+    opacity: 0.1;
+    padding: 0.5em;
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 100%;
+    text-align: center;
+}
+#imagesContainer {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#imageCover {
+    background-color: #000000;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: visible;
+}
+#imagesContainer .imageElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+#imagesContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#imagesContainer img.imageFull {
+    object-fit: cover;
+}
+#imagesContainer img.subImage {
+    /* transform: scale(2); */
+    z-index: -1;
+    filter: blur(0.7em);
+    opacity: 0.6;
+    object-fit: cover;
+}
+.hideImg {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.showImg {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+/* DIV styles */
+.divElem {
+    /* All div elements */
+    text-shadow: 0px 0px 0.5em #000000;
+    filter: drop-shadow(0 0 0.5em #000000);
+    transition: opacity 0.4s, line-height 0.4s, margin-bottom 0.4s;
+}
+.divElem.hidden {
+    opacity: 0; 
+    line-height: 0em;
+    margin-bottom: 0.0em;
+}
+.divElem.shown {
+    opacity: 1; 
+    line-height: 1.2em;
+    margin-bottom: 0.8em;
+}
+.startDiv {
+    font-size: 2em;
+}
+.endDiv {
+    font-size: 2em;
+}
+.bigDiv {
+    font-size: 1.5em;
+}
+/* Inner text for divs */
+.emphasize {
+    text-decoration: underline;
+}
+/* Gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(to bottom, hsl(200, 20%, 10%), hsl(220, 20%, 5%));
+}
+.gradient-bg-30 {
+    background: linear-gradient(to bottom, hsl(240, 20%, 10%), hsl(260, 20%, 5%));
+}
+.gradient-bg-31 {
+    background: linear-gradient(to bottom, hsl(280, 20%, 10%), hsl(300, 20%, 5%));
+}
+.gradient-bg-32 {
+    background: linear-gradient(to bottom, hsl(320, 20%, 10%), hsl(340, 20%, 5%));
+}
+.gradient-bg-33 {
+    background: linear-gradient(to bottom, hsl(0, 20%, 10%), hsl(20, 20%, 5%));
+}
+.gradient-bg-34 {
+    background: linear-gradient(to bottom, hsl(40, 20%, 10%), hsl(60, 20%, 5%));
+}
+.gradient-bg-35 {
+    background: linear-gradient(to bottom, hsl(80, 20%, 10%), hsl(100, 20%, 5%));
+}
